@@ -1,0 +1,99 @@
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  height: 300px;
+  width: 500px;
+}
+ 
+.tabs label {
+  order: 1;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin-right: 0.2rem;
+  margin-left: 0px;
+  background-color: white;
+  font-weight: bold;
+  transition: background ease 0.3s;
+}
+
+.tabs button {
+  align-items: center;
+  margin-left: 200px;
+  margin-top: 50px;
+}
+ 
+.tabs .tab {
+  order: 9;
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  display: none;
+  padding: 1rem;
+  background: seagreen;
+  padding: 20px;
+  box-shadow: -10px 10px 0px 0px black;
+}
+ 
+.tabs input[type="radio"] {
+  display: none;
+}
+ 
+.tabs input[type="radio"]:checked + label {
+  background: #fff;
+}
+ 
+.tabs input[type="radio"]:checked + label + .tab {
+  display: block;
+}
+ 
+@media (max-width: 465px) {
+  .tabs .tab,
+  .tabs label {
+   order: initial;
+  }
+ 
+  .tabs label {
+    width: 100%;
+    margin-left: 50px;
+  }
+}
+ 
+body {
+  background: #16a085;
+  min-height: 50vh;
+  box-sizing: border-box;
+  padding-top: 10vh;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  max-width: 60rem;
+  margin: 0 auto;
+  font-size: 110%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  display: inline-block;
+}
+
+.col-25{
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75{
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+
+input {
+  border: 2px solid red;
+  border-radius: 4px;
+}
